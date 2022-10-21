@@ -1,6 +1,7 @@
 ---
-Language: Cpp
-Standard: Cpp03
+# CppUTest
+# Language: C Cpp
+# Standard: Cpp03
 AccessModifierOffset: -4
 AlignAfterOpenBracket: BlockIndent
 AllowShortBlocksOnASingleLine: Empty
@@ -9,33 +10,64 @@ AllowShortFunctionsOnASingleLine: Empty
 AlwaysBreakBeforeMultilineStrings: true
 BinPackParameters: false
 BreakBeforeBraces: Custom
-BraceWrapping:
-  AfterClass: true
-  AfterControlStatement: Never
-  AfterEnum: true
-  AfterFunction: true
-  AfterNamespace: true
-  AfterStruct: true
-  AfterUnion: true
-  AfterExternBlock: false
-  BeforeCatch: true
-  BeforeElse: false
-  BeforeWhile: false
-  SplitEmptyFunction: true
-  SplitEmptyRecord: true
-  SplitEmptyNamespace: true
 BreakConstructorInitializers: AfterColon
-ColumnLimit: 120
+ColumnLimit: 100
 NamespaceIndentation: All
 NamespaceMacros:
   - TEST_GROUP
 FixNamespaceComments: false
-IndentPPDirectives: BeforeHash
 IndentWidth: 4
 IndentExternBlock: NoIndent
 PackConstructorInitializers: CurrentLine
 PointerAlignment: Left
-SortIncludes: Never
 SpaceBeforeParens: Custom
 SpaceBeforeParensOptions:
   AfterForeachMacros: false
+
+# custom
+# BasedOnStyle: LLVM
+# 多行赋值语句按 = 号对齐
+AlignConsecutiveAssignments: false
+# 多行声明语句按 = 号对齐
+AlignConsecutiveDeclarations: false
+# 是否把注释右对齐,下面为右对齐的效果
+#void someFunction() {
+#doWork(); // Does something
+#doMoreWork(); // Does something else
+#}
+AlignConsecutiveMacros: true
+AlignTrailingComments: true
+UseTab: Never
+#IndentPPDirectives: BeforeHash
+TabWidth: 4
+SortIncludes: true
+AllowShortIfStatementsOnASingleLine: false
+IndentCaseLabels: false
+BraceWrapping:
+  # class定义后面
+  AfterClass:	true
+  # 控制语句后面
+  AfterControlStatement: true
+  # enum定义后面
+  AfterEnum: true
+  # 函数定义后面
+  AfterFunction: true
+  # 命名空间定义后面
+  AfterNamespace:	true
+  # ObjC定义后面
+  AfterObjCDeclaration:	false
+  # struct定义后面
+  AfterStruct: true
+  # union定义后面
+  AfterUnion:	true
+  AfterExternBlock: false
+  # catch之前
+  BeforeCatch: true
+  # else之前
+  BeforeElse:	true
+  # 缩进大括号
+  IndentBraces:	false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+---
